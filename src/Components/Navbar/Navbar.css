@@ -1,0 +1,161 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+  
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 55px;
+  border-bottom: 1px solid #333;
+  width: 100vw;
+ position: relative;
+}
+
+.links ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  transition: .75s;
+}
+
+.links ul li{
+  margin: 10px 20px;
+  cursor: pointer;
+  font-size: 19px;
+  transition: .3s;
+}
+
+.links ul li:hover{
+  scale: 1.1;
+}
+
+.logo img{
+  width: 50px;
+}
+
+
+.toggle-button{
+  background: transparent;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+}
+
+ .toggle-icon{
+  width: 40px;
+  height: 35px;
+}
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links.open {
+  display: flex;
+  flex-direction: column;
+}
+
+@media(max-width: 768px) {
+  .links ul{
+   display: none;
+   opacity: 0; 
+   height: 0;   
+   overflow: hidden; 
+  }
+
+
+  .links.open ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 10px 0;
+    gap: 15px;
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+    transform: translateY(0); 
+    transition: opacity 0.3s ease, height 0.3s ease, transform 0.3s ease;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .toggle-icon{
+    width: 35px;
+    height: 30px;
+  }
+
+  svg.dark{
+    fill: white;
+  }
+
+  .links.light ul{
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    color: white;
+  }
+
+  .links.dark ul{
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    color: black;
+  }
+
+ .links ul li{
+    font-size: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .links ul li:hover{
+    scale: 1.08;
+  }
+}
+
+@media (max-width: 500px) {
+  .links ul li{
+    font-size: 18px;
+  }
+
+  .links.open ul{
+    gap: 4px;
+    padding: 5px 0;
+  }
+
+  .nav{
+    padding: 10px 20px;
+  }
+
+  .logo img{
+    width: 40px;
+  }
+
+  .toggle-icon{
+    width: 30px;
+    height: 24px;
+  }
+}
