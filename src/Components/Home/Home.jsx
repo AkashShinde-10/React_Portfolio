@@ -25,7 +25,7 @@ const Home = ({theme}) => {
             spy={true}
             offset={-70}
             activeClass="active">See My Work</Link></button>
-        <a href="/Akash_Shinde_Resume.pdf" download="Akash_Shinde.pdf"><button>Downlod My Resume</button></a>
+        <a href="/Shinde_Akash_Resume.pdf" download="Akash_Shinde_Resume.pdf"><button>Downlod My Resume</button></a>
       </div>
     </div>
     </div>
